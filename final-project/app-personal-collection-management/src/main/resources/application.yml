@@ -1,0 +1,26 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/personal_collection
+    username: postgres
+    password: 2211
+  jpa:
+    hibernate:
+      ddl-auto: update
+#              ddl-auto: create
+    show-sql: true
+    open-in-view: true
+    properties:
+        hibernate:
+          enable_lazy_load_no_trans: true
+  sql:
+    init:
+#      mode: always
+      mode: never
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+jwt:
+  secret-key: nimakerakshusuzjasndjandoasndasndiasndasndkasndkasdnsaldlaskdn
